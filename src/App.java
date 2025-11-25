@@ -49,15 +49,35 @@ public class App {
     }
 
     public static int[] copyFrontAndBack(int[] nums){
-
-        return null; //this is a placeholder
+        if (nums.length > 2) {
+            int[] numbers = new int[2];
+            numbers[0] = nums[0];
+            numbers[1] = nums[nums.length-1];
+            return numbers;
+        } else {
+            int[] numbers = new int[2];
+            numbers[0] = nums[0];
+            numbers[1] = nums[0];
+            return numbers;
+        }
+        
+        //this is a placeholder
 
     }
 
     public static int maxWordLength(String sentence){
-
-
-        return -1; //this is a placeholder
+        int count = 0;
+        String[] parts = sentence.split(" ");
+           
+        
+         for (String i : parts ) {
+            if (sentence.length() > count) {
+                count++;}
+         }
+            // instead of printing the value of the longest word (as it says in the prompt) it prints out the amount of words in the input.
+            // how can i fix it?
+       
+        return count; //this is a placeholder
     }
 
 
